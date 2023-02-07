@@ -27,7 +27,7 @@ const any = (array, fn = Boolean) => array.some(fn);
 function can_make_word(word) {
     let returnValue = false;
     if (!!word) {
-        returnValue = word.reduce((acc, value) => {
+        returnValue = word.split('').reduce((acc, value) => {
             return acc && any(blocks, (block) => block.contains(value))
         }, returnValue);
     }
