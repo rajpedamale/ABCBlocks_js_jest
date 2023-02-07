@@ -15,8 +15,12 @@ describe('ABC Blocks', () => {
     expect(can_make_word('a')).toBeTruthy();
   });
   
-  it('should return false for puctuation', () => {
+  it('should return false for punctuation', () => {
     expect(can_make_word('!')).toBeFalsy();
+  });
+  
+  it('should return true for a simple word', () => {
+    expect(can_make_word('BARK')).toBeTruthy();
   });
   
 });

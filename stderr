@@ -1,12 +1,13 @@
 PASS ./ABCBlocks.test.js
   ABC Blocks
     ✓ should return a boolean (2 ms)
-    ✓ should return true for "A" (2 ms)
+    ✓ should return true for "A"
     ✓ should be case insensitive
-    ✓ should return false for puctuation (1 ms)
+    ✓ should return false for punctuation (1 ms)
+    ✓ should return true for a simple word
 
 Test Suites: 1 passed, 1 total
-Tests:       4 passed, 4 total
+Tests:       5 passed, 5 total
 Snapshots:   0 total
-Time:        1.491 s
+Time:        1.41 s
 Ran all test suites.
