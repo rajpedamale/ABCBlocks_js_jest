@@ -28,7 +28,7 @@ function can_make_word(word) {
     let returnValue = false;
     if (!!word) {
         returnValue = word.split('').reduce((acc, value) => {
-            return acc && any(blocks, (block) => block.contains(value))
+            return acc && any(blocks, (block) => block.includes(value))
         }, returnValue);
     }
     return returnValue;

@@ -7,11 +7,11 @@ npm ERR! Failed at the @ lint script.
 npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
 
 npm ERR! A complete log of this run can be found in:
-npm ERR!     /home/sandbox/.npm/_logs/2023-02-07T12_39_35_929Z-debug.log
+npm ERR!     /home/sandbox/.npm/_logs/2023-02-07T12_49_29_169Z-debug.log
 FAIL ./ABCBlocks.test.js
   ABC Blocks
-    ✓ should return a boolean (8 ms)
-    ✕ should return true for "A" (3 ms)
+    ✓ should return a boolean (2 ms)
+    ✕ should return true for "A" (2 ms)
 
   ● ABC Blocks › should return true for "A"
 
@@ -32,7 +32,7 @@ FAIL ./ABCBlocks.test.js
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 passed, 2 total
 Snapshots:   0 total
-Time:        1.699 s
+Time:        1.417 s
 Ran all test suites.
 npm ERR! code ELIFECYCLE
 npm ERR! errno 1
@@ -43,4 +43,4 @@ npm ERR! Failed at the @ test script.
 npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
 
 npm ERR! A complete log of this run can be found in:
-npm ERR!     /home/sandbox/.npm/_logs/2023-02-07T12_39_38_946Z-debug.log
+npm ERR!     /home/sandbox/.npm/_logs/2023-02-07T12_49_31_511Z-debug.log
