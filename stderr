@@ -1,32 +1,28 @@
-npm ERR! code ELIFECYCLE
-npm ERR! errno 1
-npm ERR! @ lint: `eslint --config ${CYBER_DOJO_SANDBOX}/.eslintrc.json /**/*.js`
-npm ERR! Exit status 1
-npm ERR! 
-npm ERR! Failed at the @ lint script.
-npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
-
-npm ERR! A complete log of this run can be found in:
-npm ERR!     /home/sandbox/.npm/_logs/2023-02-07T12_13_44_387Z-debug.log
 FAIL ./ABCBlocks.test.js
-  ● Test suite failed to run
+  ABC Blocks
+    ✓ should return a boolean (3 ms)
+    ✕ should return true for "a" (3 ms)
 
-    SyntaxError: /sandbox/ABCBlocks.test.js: Unexpected token, expected ";" (11:43)
+  ● ABC Blocks › should return true for "a"
+
+    expect(received).toBeTruthy()
+
+    Received: false
 
        9 |   
       10 |   it('should return true for "a"', () => {
-    > 11 |     expect(can_make_word('a')).toBeTruthy());
-         |                                            ^
+    > 11 |     expect(can_make_word('a')).toBeTruthy();
+         |                                ^
       12 |   });
       13 |   
       14 | });
 
-      at Parser._raise (../etc/jest/node_modules/@babel/parser/src/parser/error.js:60:45)
+      at Object.<anonymous> (ABCBlocks.test.js:11:32)
 
 Test Suites: 1 failed, 1 total
-Tests:       0 total
+Tests:       1 failed, 1 passed, 2 total
 Snapshots:   0 total
-Time:        1.667 s
+Time:        1.586 s
 Ran all test suites.
 npm ERR! code ELIFECYCLE
 npm ERR! errno 1
@@ -37,4 +33,4 @@ npm ERR! Failed at the @ test script.
 npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
 
 npm ERR! A complete log of this run can be found in:
-npm ERR!     /home/sandbox/.npm/_logs/2023-02-07T12_13_47_088Z-debug.log
+npm ERR!     /home/sandbox/.npm/_logs/2023-02-07T12_14_27_500Z-debug.log

@@ -8,7 +8,7 @@ describe('ABC Blocks', () => {
   });
   
   it('should return true for "a"', () => {
-    expect(can_make_word('a')).toBeTruthy());
+    expect(can_make_word('a')).toBeTruthy();
   });
   
 });
