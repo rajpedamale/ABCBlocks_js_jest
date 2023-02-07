@@ -1,28 +1,37 @@
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! @ lint: `eslint --config ${CYBER_DOJO_SANDBOX}/.eslintrc.json /**/*.js`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the @ lint script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/sandbox/.npm/_logs/2023-02-07T12_36_33_507Z-debug.log
 FAIL ./ABCBlocks.test.js
   ABC Blocks
-    ✓ should return a boolean (24 ms)
-    ✕ should return true for "a" (2 ms)
+    ✓ should return a boolean (3 ms)
+    ✕ should return true for "a" (4 ms)
 
   ● ABC Blocks › should return true for "a"
 
-    expect(received).toBeTruthy()
+    TypeError: word.reduce is not a function
 
-    Received: false
+      28 |     let returnValue = false;
+      29 |     if (!!word) {
+    > 30 |         returnValue = word.reduce((acc, value) => {
+         |                            ^
+      31 |             return acc && any(blocks, (block) => block.contains(value))
+      32 |         }, returnValue);
+      33 |     }
 
-       9 |   
-      10 |   it('should return true for "a"', () => {
-    > 11 |     expect(can_make_word('a')).toBeTruthy();
-         |                                ^
-      12 |   });
-      13 |   
-      14 | });
-
-      at Object.<anonymous> (ABCBlocks.test.js:11:32)
+      at can_make_word (ABCBlocks.js:30:28)
+      at Object.<anonymous> (ABCBlocks.test.js:11:12)
 
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 passed, 2 total
 Snapshots:   0 total
-Time:        3.479 s
+Time:        1.9 s
 Ran all test suites.
 npm ERR! code ELIFECYCLE
 npm ERR! errno 1
@@ -33,4 +42,4 @@ npm ERR! Failed at the @ test script.
 npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
 
 npm ERR! A complete log of this run can be found in:
-npm ERR!     /home/sandbox/.npm/_logs/2023-02-07T12_14_51_298Z-debug.log
+npm ERR!     /home/sandbox/.npm/_logs/2023-02-07T12_36_36_768Z-debug.log

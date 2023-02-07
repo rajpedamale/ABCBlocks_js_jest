@@ -3,12 +3,20 @@
 > eslint --config ${CYBER_DOJO_SANDBOX}/.eslintrc.json /**/*.js
 
 
+/sandbox/ABCBlocks.js
+  24:2   error  Missing semicolon  semi
+  31:72  error  Missing semicolon  semi
+
+✖ 2 problems (2 errors, 0 warnings)
+  2 errors and 0 warnings potentially fixable with the `--fix` option.
+
+
 > @ test /sandbox
 > jest --coverage
 
 --------------|---------|----------|---------|---------|-------------------
 File          | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 --------------|---------|----------|---------|---------|-------------------
-All files     |     100 |      100 |     100 |     100 |                   
- ABCBlocks.js |     100 |      100 |     100 |     100 |                   
+All files     |      70 |       40 |      25 |    87.5 |                   
+ ABCBlocks.js |      70 |       40 |      25 |    87.5 | 31                
 --------------|---------|----------|---------|---------|-------------------
