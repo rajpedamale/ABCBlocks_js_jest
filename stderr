@@ -1,0 +1,36 @@
+FAIL ./ABCBlocks.test.js
+  ABC Blocks
+    ✕ should return a boolean (7 ms)
+
+  ● ABC Blocks › should return a boolean
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: "boolean"
+    Received: "number"
+
+       5 | describe('ABC Blocks', () => {
+       6 |   it('should return a boolean', () => {
+    >  7 |     expect(typeof can_make_word()).toEqual('boolean');
+         |                                    ^
+       8 |   });
+       9 | });
+      10 | 
+
+      at Object.<anonymous> (ABCBlocks.test.js:7:36)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        1.654 s
+Ran all test suites.
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! @ test: `jest --coverage`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the @ test script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/sandbox/.npm/_logs/2023-02-07T12_08_28_074Z-debug.log
