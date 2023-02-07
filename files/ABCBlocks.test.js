@@ -11,4 +11,8 @@ describe('ABC Blocks', () => {
     expect(can_make_word('A')).toBeTruthy();
   });
   
+  it('should be case insensitive', () => {
+    expect(can_make_word('a')).toBeTruthy();
+  });
+  
 });

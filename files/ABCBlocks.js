@@ -21,14 +21,14 @@ const blocks = [
     ['L','Y'],
     ['P','C'],
     ['Z','M']
-]
+];
 
 const any = (array, fn = Boolean) => array.some(fn);
 function can_make_word(word) {
     let returnValue = false;
     if (!!word) {
         returnValue = word.split('').reduce((acc, value) => {
-            return acc || any(blocks, (block) => block.includes(value))
+            return acc || any(blocks, (block) => block.includes(value));
         }, returnValue);
     }
     return returnValue;
