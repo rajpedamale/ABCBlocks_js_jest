@@ -24,7 +24,7 @@ describe('ABC Blocks', () => {
   });
   
   it('should return false when blocks are insufficient', () => {
-    expect(can_make_word('BARKBARKBARKBARK')).toBefalsy();
+    expect(can_make_word('BARKBARKBARKBARK')).toBeFalsy();
   });
   
 });
