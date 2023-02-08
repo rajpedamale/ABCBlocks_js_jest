@@ -25,19 +25,21 @@ const blocks = [
 
 const any = (array, fn = Boolean) => array.some(fn);
 
-const reducer = (acc, value) => {
-            return acc && any(blocks, (block) => block.includes(value) );
-        };
+const reducer = ({ blocks, returnValue }, value) => {
+    returnValue = returnValue && any(blocks, (block) => block.includes(value) );
+    return { blocks, returnValue };
+};
 
 function can_make_word(word) {
     let returnValue = true;
     if (!!word) {
         returnValue = word.
-                        toUpperCase().
-                        split('').
-                        reduce(reducer, returnValue);
+                            toUpperCase().
+                            split('').
+                            reduce(reducer, { blocks, returnValue }).
+                            returnValue;
     }
     return returnValue;
-}
+};
 
 module.exports = can_make_word;
