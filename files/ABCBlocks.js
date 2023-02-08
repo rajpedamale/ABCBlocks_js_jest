@@ -24,12 +24,18 @@ const blocks = [
 ];
 
 const any = (array, fn = Boolean) => array.some(fn);
+
+const reducer = (acc, value) => {
+            return acc && any(blocks, (block) => block.includes(value) );
+        };
+
 function can_make_word(word) {
     let returnValue = true;
     if (!!word) {
-        returnValue = word.toUpperCase().split('').reduce((acc, value) => {
-            return acc && any(blocks, (block) => block.includes(value) );
-        }, returnValue);
+        returnValue = word.
+                        toUpperCase().
+                        split('').
+                        reduce(reducer, returnValue);
     }
     return returnValue;
 }
