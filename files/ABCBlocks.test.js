@@ -27,7 +27,7 @@ describe('ABC Blocks', () => {
     expect(can_make_word('BARKBARKBARKBARK')).toBeFalsy();
   });
   
-  it('should pass th test suite', () => {
+  it('should pass the test suite', () => {
     expect(can_make_word('BOOK')).toBeFalsy();
     expect(can_make_word('TREAT')).toBeTruthy();
     expect(can_make_word('COMMON')).toBeFalsy();
