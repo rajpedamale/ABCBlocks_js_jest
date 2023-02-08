@@ -25,6 +25,8 @@ const blocks = [
 
 const firstMatchIndex = letter => array => array.includes(letter);
 const reducer = ({ blocks, returnValue }, value) => {
+    if (!returnValue) return { blocks, returnValue };
+  
     const indexOfMatchedBlock = blocks.findIndex(firstMatchIndex(value));
     let newBlocks, newReturnValue;
     if (indexOfMatchedBlock > -1) {
