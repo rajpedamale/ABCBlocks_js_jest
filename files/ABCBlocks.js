@@ -23,23 +23,31 @@ const blocks = [
     ['Z','M']
 ];
 
-const any = (array, fn = Boolean) => array.some(fn);
-
+const firstMatchIndex = letter => array => array.includes(letter);
 const reducer = ({ blocks, returnValue }, value) => {
-    returnValue = returnValue && any(blocks, (block) => block.includes(value) );
-    return { blocks, returnValue };
+    const indexOfMatchedBlock = blocks.findIndex(firstMatchIndex(value));
+    let newBlocks, newReturnValue;
+    if (indexOfMatchedBlock > -1) {
+        newReturnValue = true;
+        newBlocks = blocks.slice(0, indexOfMatchedBlock).
+                        concat(blocks.slice(indexOfMatchedBlock+1, blocks.length));
+    } else {
+        newReturnValue = false;
+        newBlocks = blocks;
+    }
+    return { blocks: newBlocks, returnValue: returnValue && newReturnValue };
 };
 
 function can_make_word(word) {
-    let returnValue = true;
+    let returnValue = false;
     if (!!word) {
         returnValue = word.
                             toUpperCase().
                             split('').
-                            reduce(reducer, { blocks, returnValue }).
+                            reduce(reducer, { blocks, returnValue: true }).
                             returnValue;
     }
     return returnValue;
-};
+}
 
 module.exports = can_make_word;

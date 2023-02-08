@@ -23,7 +23,7 @@ describe('ABC Blocks', () => {
     expect(can_make_word('BARK')).toBeTruthy();
   });
   
-  it.skip('should return false when blocks are insufficient', () => {
+  it('should return false when blocks are insufficient', () => {
     expect(can_make_word('BARKBARKBARKBARK')).toBeFalsy();
   });
   
